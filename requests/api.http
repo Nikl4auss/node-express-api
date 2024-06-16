@@ -1,0 +1,35 @@
+GET http://localhost:1234/movies
+
+###
+
+GET http://localhost:1234/movies/13d8dd3f-d290-46b0-9359-044fd45ae11d
+
+###
+
+GET http://localhost:1234/movies?genre=action
+
+### Crear una pelicula
+
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975,
+  "director": "Francis Ford Copola",
+  "duration": 175,
+  "poster": "https://img.fruugo.com/product/4/49/1444149_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+}
+
+### Actualizar una pelicula
+
+PATCH http://localhost:1234/movies/13d8dd3f-d290-46b0-9359-044fd45ae11d
+Content-Type: application/json
+
+{
+  "year": 1993
+}
